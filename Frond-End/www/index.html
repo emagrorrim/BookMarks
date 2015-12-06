@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookMarks</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link href="style/main.css" type="text/css" rel="stylesheet" >
+    <script src="JQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
+  </head>
+  <body>
+    <div id="cover">
+      <div id="NewBookMarks">
+        <input type="button" value="X" id="disappearBtn" onclick="coverDismiss()">
+        <div>
+          <span style="margin-left:5%;">书签名称：</span>
+          <input type="text" class="submitTextField" id="nameTextField">
+        </div>
+        <div class="">
+          <span style="margin-left:0%;">书签地址：</span>
+          <input type="text" class="submitTextField" id="addressTextField">
+        </div>
+        <p id="errorMsg">error</p>
+        <input type="button" value="提交" id="submitBtn" onclick="submitBookMark()">
+      </div>
+    </div>
+    <div id="searchBar">
+      <input type="text" id="textField" placeholder="Input the word you want to search:" oninput="inputChange()">
+      <span style="margin-left:2%;"> 搜索到<b>0</b>条 </span>
+    </div>
+    <ul id="list"></ul>
+    <div id="footer">
+      <input id="addNewBtn" type="button" name="name" value="添加" onclick="addNewBookMarks()">
+      <div id="pageBtnBar"></div>
+    </div>
+
+  </body>
+</html>

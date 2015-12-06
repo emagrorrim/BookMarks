@@ -1,0 +1,183 @@
+body {
+  text-align: center;
+  color: rgb(100, 100, 100);
+}
+
+p {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-family: sans-serif;
+}
+
+#searchBar {
+
+  background-color: rgb(249, 249, 249);
+  margin: 0px auto;
+  width: 90%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  margin-left: 5%;
+}
+
+#textField {
+  width: 85%;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  font-size:80%;
+  text-indent: 1em;
+}
+
+#list {
+  padding-top: 0%;
+}
+
+#deleteBtn {
+  background: none;
+  border: none;
+  float: left;
+  margin-left: 93%;
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.listItemLinkTitle {
+  display: block;
+  margin-top: 0.1%;
+  margin-bottom: 1.5%;
+}
+
+#listItemTitle {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 65%;
+  font-size: 110%;
+  line-height: 130%;
+  /*border: 1px solid red;*/
+}
+
+#listItemCreated {
+  font-size: 70%;
+  width: 35%;
+  margin-left: 58%;
+  text-align: right;
+  margin-right: 5%;
+  color: rgb(210, 210, 210);
+  margin-top: -1%;
+}
+
+#line {
+  border-top: 1px dashed rgb(210, 210, 210);
+  width: 90%;
+  margin: 0px auto;
+}
+
+#purpleFont {
+   background-color:rgb(242,74,152);
+   color:white;
+   display: inline-block;
+   /*border: 1px solid black;*/
+}
+
+#footer {
+  text-align: left;
+  margin-left: 8%;
+}
+
+#addNewBtn {
+  background: none;
+  border: 1px solid darkgray;
+  color: darkgray;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#pageBtnBar {
+  float: right;
+  margin-right: 5%;
+  width: 50%;
+}
+
+#currentPageBtn {
+  background: none;
+  border: none;
+  float: right;
+  background-color:rgb(242,74,152);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 1%;
+  color: white;
+}
+#pageBtn {
+  color:blue;
+  background: none;
+  border: 1px solid rgb(242,74,152);
+  float: right;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 1%;
+  color: rgb(242,74,152);
+}
+
+#cover {
+  position: fixed;
+  width: 101%;
+  height: 101%;
+  left: -1%;
+  top: -1%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  text-align: center;
+}
+
+#NewBookMarks {
+  height: 30%;
+  width: 400px;
+  background-color: rgb(230, 230, 230);
+  margin: 0px auto;
+  margin-top: 10%;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+
+#disappearBtn {
+  position: relative;
+  border: none;
+  background: none;
+  float: right;
+  padding-right: 1%;
+  /*margin-top: 0px;*/
+}
+
+.submitTextField {
+  width: 60%;
+  margin-top: 5%;
+  margin-left: -2%;
+  border: none;
+  height: 25px;
+}
+
+#errorMsg {
+  color:red;
+  display: none;
+}
+
+#submitBtn {
+  position: relative;
+  right: 30px;
+  bottom: -20px;
+  float: right;
+  border: 1px solid darkgray;
+  background: none;
+  width: 20%;
+  height: 15%;
+  border-radius: 5px;
+}
