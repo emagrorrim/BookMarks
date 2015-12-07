@@ -11,8 +11,10 @@
  * 删除一个bookmark:<https://fathomless-brook-8494.herokuapp.com/bookmarks/delete>
  	
  	post字段{index:""};
+ 	
  ---
 ###本地网页服务器部署
+
 #####网页部署
 1. 终端下进入/Frond-End
 2. 输入指令'gulp'(安装nodejs)
