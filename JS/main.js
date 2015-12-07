@@ -168,7 +168,6 @@ function submitBookMark() {
   }else {
     postChangeToServer("{ title : '" + $("#nameTextField").val()+"', " +
     "address : '" + $("#addressTextField").val() + "'}");
-    coverDismiss();
   }
 }
 
@@ -183,8 +182,10 @@ function postChangeToServer(msg) {
         $("#list").empty();
         $("#pageBtnBar").empty();
         makelist(data,1);
+        coverDismiss();
       }else {
         alert("添加失败");
+        coverDismiss();
       }
     }
   )
