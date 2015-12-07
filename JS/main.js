@@ -180,6 +180,7 @@ function postChangeToServer(msg) {
       if (response.result == "success") {
         data.splice(0,0,object);
         $('#textField').val("");
+        resetList($('#textField').val(),1)
         coverDismiss();
       }else {
         alert("添加失败");
