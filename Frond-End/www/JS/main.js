@@ -1,4 +1,4 @@
-var host = "https://fathomless-brook-8494.herokuapp.com";
+var host = "http://localhost:5000";
 var data = [];
 var currentData = [];
 var pageNum = 1;
