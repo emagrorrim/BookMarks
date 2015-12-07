@@ -1,5 +1,4 @@
 var host = "https://fathomless-brook-8494.herokuapp.com";
-// var host = "http://0.0.0.0:5000";
 var data = [];
 var currentData = [];
 var pageNum = 1;
@@ -12,7 +11,6 @@ function loadJson(url) {
   $.get(url,
     function(response,status){
       data = response.bookmarks;
-      // alert(response.bookmarks.length);
       for (var i = 0; i < data.length; i++) {
         currentData.push(i);
       }
@@ -81,7 +79,6 @@ function makelist(listData,page) {
       listItem1 = $("<a target='_blank'></a>").text(listData[i].title);
       listItem1.attr('id','listItemTitle');
       listItem1.attr('class','listItemLinkTitle');
-      // alert(listData[i].address);
       if (listData[i].address.indexOf("http") == 0) {
         listItem1.attr('href',listData[i].address);
       }else {
@@ -171,7 +168,6 @@ function submitBookMark() {
   }else {
     postChangeToServer("{ title : '" + $("#nameTextField").val()+"', " +
     "address : '" + $("#addressTextField").val() + "'}");
-
   }
 }
 
@@ -183,9 +179,8 @@ function postChangeToServer(msg) {
     function(response) {
       if (response.result == "success") {
         data.splice(0,0,object);
-        $("#list").empty();
-        $("#pageBtnBar").empty();
-        makelist(data,1);
+        $('#textField').val("");
+        resetList($('#textField').val(),1)
         coverDismiss();
       }else {
         alert("添加失败");
