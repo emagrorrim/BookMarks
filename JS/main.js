@@ -179,9 +179,7 @@ function postChangeToServer(msg) {
     function(response) {
       if (response.result == "success") {
         data.splice(0,0,object);
-        $("#list").empty();
-        $("#pageBtnBar").empty();
-        resetList("",1);
+        $('#textField').val("");
         coverDismiss();
       }else {
         alert("添加失败");
