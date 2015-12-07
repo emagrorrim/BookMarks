@@ -46,15 +46,27 @@ def crossdomain(origin=None, methods=None, headers=None,
         return update_wrapper(wrapped_function, f)
     return decorator
 
-with open('json_resource/bookmarks.json', 'r') as jsonFile:
-    jsonArray = json.load(jsonFile)
+def readJson():
+    with open('json_resource/bookmarks.json', 'r') as jsonFile:
+        jsonArray = json.load(jsonFile)
+    return jsonArray
+
+def writeJson(jarr):
+    with open('json_resource/bookmarks.json', 'w') as jsonFile:
+        json.dump(jarr, jsonFile)
+# jsonArray = []
 
 def addnewbookmark(title,created,address):
     new = {"title": title, "created": created, "address": address}
+    jsonArray = readJson()
     jsonArray.insert(0,new)
+    writeJson(jsonArray)
+
 
 def deletebookmark(index):
+    jsonArray = readJson()
     jsonArray.pop(index)
+    writeJson(jsonArray)
 
 
 app = Flask(__name__)
@@ -62,6 +74,7 @@ app = Flask(__name__)
 @app.route('/bookmarks/all',methods=['GET'])
 @crossdomain(origin='*')
 def getJson():
+    jsonArray = readJson();
     return jsonify({'bookmarks':jsonArray})
 
 @app.route('/bookmarks/add',methods=['POST'])
@@ -87,4 +100,4 @@ def deleteIndex():
     return jsonify({'result':result})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
