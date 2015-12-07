@@ -181,7 +181,7 @@ function postChangeToServer(msg) {
         data.splice(0,0,object);
         $("#list").empty();
         $("#pageBtnBar").empty();
-        makelist(data,1);
+        resetList("",1);
         coverDismiss();
       }else {
         alert("添加失败");
