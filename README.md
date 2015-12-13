@@ -25,7 +25,7 @@
 
 #####服务器部署
 1. 终端下进入/Back-End
-2. 输入指令'python Server.py'(安装python2.7)
+2. 输入指令'python Server.py'(安装python2.7,flask)
 3. 在浏览器中输入"localhost:5000/bookmarks/all"
 
 #####测试
